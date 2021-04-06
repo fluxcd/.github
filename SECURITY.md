@@ -1,6 +1,6 @@
 # Flux Security
 
-This document <https://github.com/fluxcd/community/blob/main/SECURITY.md> defines security reporting, handling, and disclosure information for the Flux project and community.
+This document defines security reporting, handling, and disclosure information for the Flux project and community.
 
 ## Report a Vulnerability
 
