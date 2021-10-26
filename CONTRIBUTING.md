@@ -1,6 +1,15 @@
 # Contributing
 
 > **Note:** In this document we define the contribution process for the Flux project and community. These guidelines apply to all git repositories in the `fluxcd` GitHub org.
+>
+> For more detailed docs, please refer to the following docs for
+>
+> - [helm-controller](https://github.com/fluxcd/kustomize-controller/blob/main/DEVELOPMENT.md)
+> - [kustomize-controller](https://github.com/fluxcd/kustomize-controller/blob/main/DEVELOPMENT.md)
+> - [image-automation-controller](https://github.com/fluxcd/image-automation-controller/blob/main/DEVELOPMENT.md)
+> - [image-reflector-controller](https://github.com/fluxcd/image-reflector-controller/blob/main/DEVELOPMENT.md)
+> - [notification-controller](https://github.com/fluxcd/notification-controller/blob/main/DEVELOPMENT.md)
+> - [source-controller](https://github.com/fluxcd/source-controller/blob/main/DEVELOPMENT.md)
 
 Flux is [Apache 2.0 licensed](https://github.com/fluxcd/flux2/blob/main/LICENSE) and
 accepts contributions via GitHub pull requests. This document outlines
