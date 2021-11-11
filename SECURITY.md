@@ -34,5 +34,6 @@ Current Security Team members:
 Vulnerability disclosures are emailed to the Flux Dev mailing list <https://lists.cncf.io/g/cncf-flux-dev> and announced publicly.
 Disclosures will contain an overview, details about the vulnerability, a fix that will typically be an update, and optionally a workaround if one is available.
 
+We will coordinate publishing disclosures and security releases in a way that is realistic and necessary for end users.
 We prefer to fully disclose the vulnerability as soon as possible once a user mitigation is available.
-Disclosures will be published on the same day as a release fixing the vulnerability, after the release is published.
+Disclosures will always be published in a timely manner after a release is published that fixes the vulnerability.
