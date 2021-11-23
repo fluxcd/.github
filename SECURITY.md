@@ -1,14 +1,8 @@
 # Flux Security
 
-This document defines security reporting, handling, and disclosure information for the Flux project and community.
+This document defines security reporting, handling, disclosure, and audit information for the Flux project and community.
 
-## Security Advisories
-
-Here is an overview of all our published security advisories.
-
-Date | CVE | Title | Severity | Affected version(s) | Reported by
----- | --- | ----- | -------- | ------------------- | -----------
-2021-11-10 | CVE-2021-41254 | [Privilege escalation to cluster admin on multi-tenant Flux](https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7) | High | < 0.18.0 | ADA Logics
+Also see our [Flux Security documentation](https://fluxcd.io/docs/security) landing page for an overview of project security information geared toward end users.
 
 ## Security Process
 
@@ -49,3 +43,17 @@ Disclosures will contain an overview, details about the vulnerability, a fix tha
 We will coordinate publishing disclosures and security releases in a way that is realistic and necessary for end users.
 We prefer to fully disclose the vulnerability as soon as possible once a user mitigation is available.
 Disclosures will always be published in a timely manner after a release is published that fixes the vulnerability.
+
+## Advisories
+
+Here is an overview of all our published security advisories.
+
+Date | CVE | Title | Severity | Affected version(s) | Reported by
+---- | --- | ----- | -------- | ------------------- | -----------
+2021-11-10 | CVE-2021-41254 | [Privilege escalation to cluster admin on multi-tenant Flux](https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7) | High | < 0.18.0 | ADA Logics
+
+## Audits
+
+- In 2021 there was a security assessment and fuzzer development of the FluxCD repositories made by Ada Logics and funded by the OSTIF.
+- For a summary, please see [this blog post](https://fluxcd.io/blog/2021-11-10-flux-security-audit/)
+- For all details, please read the [audit full technical report](https://fluxcd.io/FluxFinalReport-v1.1.pdf)
