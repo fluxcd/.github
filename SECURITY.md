@@ -38,6 +38,8 @@ Current Security Team members:
   Information is shared only on a need to know basis.
 - As the security issue moves through the identification and resolution process, the reporter will be notified.
 - Additional questions about the vulnerability may also be asked of the reporter.
+- Note that while Flux is very active it is a vendor-neutral CNCF project maintained by volunteers, not by a single company. As such, security issue handling is done on a best-effort basis.
+  Talk to us if you are interested in getting involved with this work! :-)
 
 ### Disclosures
 
