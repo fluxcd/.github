@@ -47,19 +47,25 @@ The Flux project and community git repositories maintain a strong commitment to 
 These things will make a PR more likely to be accepted:
 
 - a well-described requirement
-- tests for new code
-- tests for old code!
-- new code and tests follow the conventions in old code and tests
+- new code follows the conventions in old code
 - a good commit message (see below)
 - all code must abide [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
 - names should abide [What's in a name](https://talks.golang.org/2014/names.slide#1)
 - code must build on both Linux and Darwin, via plain `go build`
-- code should have appropriate test coverage and tests should be written
-  to work with `go test`
 
 In general, we will merge a PR once one maintainer has endorsed it.
 For substantial changes, more people may become involved, and you might
 get asked to resubmit the PR or divide the changes into more than one PR.
+
+### Testing Requirements
+
+We require the following:
+
+- code should have appropriate test coverage and tests should be written to work with `go test`
+- new tests follow the conventions of existing tests
+- regression tests
+
+Regression tests are important because they ensure that the code change did not break any existing features. Here is [a commit with regression tests](https://github.com/fluxcd/source-controller/commit/e736493730318764a0568c8ae3c0e8549924bb44) for you to refer.
 
 ### Certificate of Origin
 
