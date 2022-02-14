@@ -54,6 +54,6 @@ Date | CVE | Title | Severity | Affected version(s) | Reported by
 
 ## Audits
 
-- In 2021 there was a security assessment and fuzzer development of the FluxCD repositories made by Ada Logics and funded by the OSTIF.
+- In 2021 there was a security assessment and fuzzer development of the `fluxcd` repositories made by Ada Logics and funded by the CNCF.
 - For a summary, please see [this blog post](https://fluxcd.io/blog/2021-11-10-flux-security-audit/)
 - For all details, please read the [audit full technical report](https://fluxcd.io/FluxFinalReport-v1.1.pdf)
