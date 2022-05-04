@@ -52,6 +52,9 @@ Here is an overview of all our published security advisories.
 Date | CVE | Title | Severity | Affected version(s) | Reported by
 ---- | --- | ----- | -------- | ------------------- | -----------
 2021-11-10 | CVE-2021-41254 | [Privilege escalation to cluster admin on multi-tenant Flux](https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7) | High | < 0.18.0 | ADA Logics
+2022-05-04 | CVE-2022-24817 | [Improper kubeconfig validation allows arbitrary code execution](https://github.com/fluxcd/flux2/security/advisories/GHSA-vvmq-fwmg-2gjc) | Critical | < 0.29.0 >= v0.1.0 | The Flux Team
+2022-05-04 | CVE-2022-24877 | [Improper path handling in Kustomization files allows path traversal](https://github.com/fluxcd/flux2/security/advisories/GHSA-j77r-2fxf-5jrw) | Critical | < v0.29.0 | The Flux Team
+2022-05-04 | CVE-2022-24878 | [Improper path handling in Kustomization files allows for denial of service](https://github.com/fluxcd/flux2/security/advisories/GHSA-7pwf-jg34-hxwp) | High | < v0.28.5 >= v0.19.0 | The Flux Team
 
 ## Audits
 
