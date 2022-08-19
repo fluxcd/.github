@@ -64,5 +64,5 @@ when it will be available or links to where the patch will be available.*
 This list will be notified immediately if the disclosure date is at risk or
 changes. Questions should be directed to the [security contacts].
 
-[embargo policy]: https://github.com/fluxcd/.github/CVD_LIST.md#embargo-policy
+[embargo policy]: https://github.com/fluxcd/.github/blob/main/CVD_LIST.md#embargo-policy
 [security contacts]: https://github.com/fluxcd/.github/blob/main/SECURITY.md
