@@ -47,16 +47,12 @@ Disclosures will always be published in a timely manner after a release is publi
 
 ## Advisories
 
-Here is an overview of all our published security advisories.
+The Flux security team publishes its advisories directly into the affected repositories.
+The main exception to this rule is flux2, which aggregates the CVEs across all Flux components (CLI and controllers).
 
-Date | CVE | Title | Severity | Affected version(s) | Reported by
----- | --- | ----- | -------- | ------------------- | -----------
-2021-11-10 | CVE-2021-41254 | [Privilege escalation to cluster admin on multi-tenant Flux](https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7) | High | < 0.18.0 | ADA Logics
-2022-05-04 | CVE-2022-24817 | [Improper kubeconfig validation allows arbitrary code execution](https://github.com/fluxcd/flux2/security/advisories/GHSA-vvmq-fwmg-2gjc) | Critical | < 0.29.0 >= v0.1.0 | The Flux Team
-2022-05-04 | CVE-2022-24877 | [Improper path handling in Kustomization files allows path traversal](https://github.com/fluxcd/flux2/security/advisories/GHSA-j77r-2fxf-5jrw) | Critical | < v0.29.0 | The Flux Team
-2022-05-04 | CVE-2022-24878 | [Improper path handling in Kustomization files allows for denial of service](https://github.com/fluxcd/flux2/security/advisories/GHSA-7pwf-jg34-hxwp) | High | < v0.29.0 >= v0.19.0 | The Flux Team
-2022-08-31 | CVE-2022-36035 | [Flux CLI Workload Injection](https://github.com/fluxcd/flux2/security/advisories/GHSA-xwf3-6rgv-939r) | High | < v0.32.0 >= v0.21.0 | The Flux Team
-2022-09-07 | CVE-2022-36049 | [Helm Controller denial of service](https://github.com/fluxcd/flux2/security/advisories/GHSA-p2g7-xwvr-rrw3) | High | < v0.32.0 >= v0.0.17 | The Flux Team
+The existing advisories can be found below:
+- https://github.com/fluxcd/flux2/security/advisories
+- https://github.com/fluxcd/kustomize-controller/security/advisories
 
 ## Audits
 
