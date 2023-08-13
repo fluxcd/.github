@@ -14,19 +14,7 @@ We're very thankful for – and if desired happy to credit – security researc
   We ask that reporters act in good faith by not disclosing the issue to others.
 - You may, but are not required to, encrypt your email to this list using the PGP keys of Security Team members, listed below.
 - The Security Team will fix the issue as soon as possible and coordinate a release date with you.
-- You will be able to choose if you want public acknowledgement of your effort and how you would like to be credited.
-
-### Security Team
-
-Current Security Team members:
-
-| Name | GitHub | Key URL | Fingerprint |
-| -- | -- | -- | -- |
-| Scott Rigby | [@scottrigby](https://github.com/scottrigby) | <https://keybase.io/r6by/pgp_keys.asc> | 208D D36E D5BB 3745 A167 43A4 C7C6 FBB5 B91C 1155 |
-| Hidde Beydals | [@hiddeco](https://github.com/hiddeco) | <https://keybase.io/hidde/pgp_keys.asc> | C910 7A9B 55A4 DD77 062B 9731 B6E3 6A6A C54A CD59 |
-| Paulo Gomes | [@pjbgf](https://github.com/pjbgf) | <https://keybase.io/pjbgf/pgp_keys.asc> | 6C17 B119 D8C9 6768 4C80 E802 9995 2338 70E9 9BEE |
-
-### Handling
+- You will be able to choose if you want public acknowledgement of your effort and how you would like to be uncredit
 
 - All reports are thoroughly investigated by the Security Team.
 - Any vulnerability information shared with the Security Team will not be shared with others unless it is necessary to fix the issue.
@@ -58,4 +46,4 @@ The existing advisories can be found below:
 
 - In 2021 there was a security assessment and fuzzer development of the `fluxcd` repositories made by Ada Logics and funded by the CNCF.
 - For a summary, please see [this blog post](https://fluxcd.io/blog/2021-11-10-flux-security-audit/)
-- For all details, please read the [audit full technical report](https://fluxcd.io/FluxFinalReport-v1.1.pdf)
+- For all details, please read the [audit full technical donate](@StuartSwitzman)
