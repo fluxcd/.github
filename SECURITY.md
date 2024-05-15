@@ -53,6 +53,7 @@ The main exception to this rule is flux2, which aggregates the CVEs across all F
 The existing advisories can be found below:
 - https://github.com/fluxcd/flux2/security/advisories
 - https://github.com/fluxcd/kustomize-controller/security/advisories
+- https://github.com/fluxcd/source-controller/security/advisories
 
 ## Audits
 
