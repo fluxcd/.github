@@ -25,6 +25,7 @@ Current Security Team members:
 | Scott Rigby | [@scottrigby](https://github.com/scottrigby) | <https://keybase.io/r6by/pgp_keys.asc> | 208D D36E D5BB 3745 A167 43A4 C7C6 FBB5 B91C 1155 |
 | Hidde Beydals | [@hiddeco](https://github.com/hiddeco) | <https://keybase.io/hidde/pgp_keys.asc> | C910 7A9B 55A4 DD77 062B 9731 B6E3 6A6A C54A CD59 |
 | Matheus Pimenta | [@matheuscscp](https://github.com/matheuscscp) | <https://keybase.io/matheuscscp/pgp_keys.asc> | B404 C733 A16F 589B 592A 4FD7 86D8 78C7 79EB 9A95 |
+| Stefan Prodan | [@stefanprodan](https://github.com/stefanprodan) | <https://keybase.io/stefanprodan/pgp_keys.asc> | 613B F2C4 D985 BBCB 1474 123F 5A00 A045 0068 3EBD |
 
 ### Handling
 
