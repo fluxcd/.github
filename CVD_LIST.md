@@ -39,4 +39,4 @@ To be eligible for joining the CVD list, you should:
 
 ### Request to Join
 
-Submit a request [here](https://docs.google.com/forms/d/1RJRUSwHUeKwJfZdcAzIkyKD4TeAweLLjXZkcN-uVDqA).
+Submit a request  at <cncf-flux-security@lists.cncf.io>
