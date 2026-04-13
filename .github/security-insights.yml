@@ -1,124 +1,76 @@
 header:
   schema-version: 2.0.0
-  last-updated: '2025-04-03'
-  last-reviewed: '2025-04-03'
-  url: https://github.com/fluxcd/.github
+  last-updated: '2026-04-12'
+  last-reviewed: '2026-04-12'
+  url: https://github.com/fluxcd/.github/blob/main/.github/security-insights.yml
   comment: |
     This file contains the security insights information for the Flux project.
 
 project:
   name: Flux
-  homepage: https://github.com/fluxcd
+  homepage: https://fluxcd.io
+  roadmap: https://fluxcd.io/roadmap/
   administrators:
     - name: Stefan Prodan
       affiliation: ControlPlane
-      social: github: @stefanprodan, slack: stefanprodan 
+      social: @stefanprodan
       primary: true
+    - name: Hidde Beydals
+      affiliation: Independent
+      social: @hiddeco
+    - name: Michael Bridgen
+      affiliation: Independent
+      social: @squaremo
   documentation:
-    quickstart-guide: https://github.com/fluxcd/.github/blob/main/CONTRIBUTING.md
-    detailed-guide: https://github.com/fluxcd/.github/blob/main/CONTRIBUTING.md
+    quickstart-guide: https://fluxcd.io/flux/get-started/
+    release-process: https://fluxcd.io/flux/releases/
+    signature-verification: https://fluxcd.io/flux/security/
     code-of-conduct: https://github.com/fluxcd/.github/blob/main/CODE_OF_CONDUCT.md
   repositories:
-    - name: Image automation controller
-      url: https://github.com/fluxcd/image-automation-controller
-      comment: |
-        GitOps Toolkit controller that patches container image tags in Git.
-    - name: website
-      url: https://github.com/fluxcd/website
-      comment: |
-        he Flux website and user documentation
-    - name: kustomize-controller
-      url: https://github.com/fluxcd/kustomize-controller
-      comment: |
-        The GitOps Toolkit Kustomize reconciler.
-    - name: flux2-multi-tenancy
-      url: https://github.com/fluxcd/flux2-multi-tenancy
-      comment: |
-        Manage multi-tenant clusters with Flux.
-    - name: stats
-      url: https://github.com/fluxcd/stats
-      comment: |
-        Flux project usage statistics.
-    - name: image-reflector-controller
-      url: https://github.com/fluxcd/image-reflector-controller
-      comment: |
-        GitOps Toolkit controller that scans container registries.
-    - name: flagger
-      url: https://github.com/fluxcd/flagger
-      comment: |
-        Progressive delivery Kubernetes operator (Canary, A/B Testing and Blue/Green deployments).
-    - name: community
-      url: https://github.com/fluxcd/community
-      comment: |
-        Flux community content.
-    - name: notification-controller
-      url: https://github.com/fluxcd/notification-controller
-      comment: |
-        The GitOps Toolkit event forwarder and notification dispatcher.
-    - name: source-controller
-      url: https://github.com/fluxcd/source-controller
-      comment: |
-        The GitOps Toolkit source management component.
-    - name: terraform-provider-flux
-      url: https://github.com/fluxcd/terraform-provider-flux
-      comment: |
-        Terraform and OpenTofu provider for bootstrapping Flux.
-    - name: pkg
-      url: https://github.com/fluxcd/pkg
-      comment: |
-        Toolkit common packages.
-    - name: source-watcher
-      url: https://github.com/fluxcd/source-watcher
-      comment: |
-        Example consumer of the GitOps Toolkit Source APIs.
-    - name: helm-controller
-      url: https://github.com/fluxcd/helm-controller
-      comment: |
-        The GitOps Toolkit Helm reconciler, for declarative Helming.
-    - name: flux2
+    - name: fluxcd/flux2
       url: https://github.com/fluxcd/flux2
       comment: |
-        Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit..
-    - name: flux2-monitoring-example
-      url: https://github.com/fluxcd/flux2-monitoring-example
+        The Flux distribution and command-line interface (CLI)
+    - name: fluxcd/pkg
+      url: https://github.com/fluxcd/pkg
       comment: |
-        Prometheus monitoring for the Flux control plane.
-    - name: Flux Homebrew Tap
-      url: https://github.com/fluxcd/homebrew-tap
+        The GitOps Toolkit Go SDK for building Flux controllers and CLI plugins
+    - name: fluxcd/source-controller
+      url: https://github.com/fluxcd/source-controller
       comment: |
-        Homebrew formulas for Flux CLI.
-    - name: go-git-providers
-      url: https://github.com/fluxcd/go-git-providers
+        Kubernetes operator for managing sources (Git, OCI and Helm repositories, S3-compatible Buckets)
+    - name: fluxcd/source-watcher
+      url: https://github.com/fluxcd/source-watcher
       comment: |
-        Git provider client for Go.
-    - name: flux-benchmark
-      url: https://github.com/fluxcd/flux-benchmark
+        Kubernetes operator for advanced source composition and decomposition patterns
+    - name: fluxcd/kustomize-controller
+      url: https://github.com/fluxcd/kustomize-controller
       comment: |
-        Mean Time To Production benchmark for Flux.
-    - name: cli-utils
-      url: https://github.com/fluxcd/cli-utils
+        Kubernetes operator for building GitOps pipelines with Kustomize
+    - name: fluxcd/helm-controller
+      url: https://github.com/fluxcd/helm-controller
       comment: |
-        Fork of kstatus for the Flux project.
-    - name: flux2-hub-spoke-example
-      url: https://github.com/fluxcd/flux2-hub-spoke-example
+        Kubernetes operator for lifecycle management of Helm releases
+    - name: fluxcd/notification-controller
+      url: https://github.com/fluxcd/notification-controller
       comment: |
-        A hub-and-spoke example for multi-cluster continuous delivery with Flux.
-    - name: test-infra
-      url: https://github.com/fluxcd/test-infra
+        Kubernetes operator for handling inbound and outbound events (alerts and webhook receivers)
+    - name: fluxcd/image-reflector-controller
+      url: https://github.com/fluxcd/image-reflector-controller
       comment: |
-        Test infrastructure for the Flux project.
-    - name: flux2-kustomize-helm-example
-      url: https://github.com/fluxcd/flux2-kustomize-helm-example
+        Kubernetes operator for scanning container registries for new image tags and digests
+    - name: fluxcd/image-automation-controller
+      url: https://github.com/fluxcd/image-automation-controller
       comment: |
-        A GitOps workflow example for multi-env deployments with Flux, Kustomize and Helm.
-    - name: cues
-      url: https://github.com/fluxcd/cues
+        Kubernetes operator for patching container image tags and digests in Git repositories
+    - name: fluxcd/flagger
+      url: https://github.com/fluxcd/flagger
       comment: |
-        Experimental CUE packages for generating Flux configurations.
-    - name: gitkit
-      url: https://github.com/fluxcd/gitkit
+        Progressive delivery Kubernetes operator (Canary, A/B Testing and Blue/Green deployments)
+    - name: fluxcd/website
+      url: https://github.com/fluxcd/website
       comment: |
-        Git server for Flux controllers unit testing. Forked from sosedoff/gitkit to keep up with our needs.
+        The Flux documentation website
   vulnerability-reporting:
     reports-accepted: true
     bug-bounty-available: false
@@ -126,4 +78,4 @@ project:
       name: The Flux security team.
       email: cncf-flux-security@lists.cncf.io
       primary: true
-    security-policy: https://github.com/fluxcd/source-controller/security
+    security-policy: https://github.com/fluxcd/.github/blob/main/SECURITY.md

@@ -8,7 +8,7 @@ Also see our [Flux Security documentation](https://fluxcd.io/flux/security) land
 
 ### Report a Vulnerability
 
-We're very thankful for – and if desired happy to credit – security researchers and users who report vulnerabilities to the Flux community.
+We're very thankful for – and if desired happy to credit – security researchers and users who report vulnerabilities to the Flux community.
 
 - To make a report please email the private security list at <cncf-flux-security@lists.cncf.io> with the details.
   We ask that reporters act in good faith by not disclosing the issue to others.
@@ -20,12 +20,12 @@ We're very thankful for – and if desired happy to credit – security researc
 
 Current Security Team members:
 
-| Name | GitHub | Key URL | Fingerprint |
-| -- | -- | -- | -- |
-| Scott Rigby | [@scottrigby](https://github.com/scottrigby) | <https://keybase.io/r6by/pgp_keys.asc> | 208D D36E D5BB 3745 A167 43A4 C7C6 FBB5 B91C 1155 |
-| Hidde Beydals | [@hiddeco](https://github.com/hiddeco) | <https://keybase.io/hidde/pgp_keys.asc> | C910 7A9B 55A4 DD77 062B 9731 B6E3 6A6A C54A CD59 |
-| Matheus Pimenta | [@matheuscscp](https://github.com/matheuscscp) | <https://keybase.io/matheuscscp/pgp_keys.asc> | B404 C733 A16F 589B 592A 4FD7 86D8 78C7 79EB 9A95 |
-| Stefan Prodan | [@stefanprodan](https://github.com/stefanprodan) | <https://keybase.io/stefanprodan/pgp_keys.asc> | 613B F2C4 D985 BBCB 1474 123F 5A00 A045 0068 3EBD |
+| Name            | GitHub                                           | Key URL                                        | Fingerprint                                       |
+|-----------------|--------------------------------------------------|------------------------------------------------|---------------------------------------------------|
+| Hidde Beydals   | [@hiddeco](https://github.com/hiddeco)           | <https://keybase.io/hidde/pgp_keys.asc>        | C910 7A9B 55A4 DD77 062B 9731 B6E3 6A6A C54A CD59 |
+| Matheus Pimenta | [@matheuscscp](https://github.com/matheuscscp)   | <https://keybase.io/matheuscscp/pgp_keys.asc>  | B404 C733 A16F 589B 592A 4FD7 86D8 78C7 79EB 9A95 |
+| Stefan Prodan   | [@stefanprodan](https://github.com/stefanprodan) | <https://keybase.io/stefanprodan/pgp_keys.asc> | 613B F2C4 D985 BBCB 1474 123F 5A00 A045 0068 3EBD |
+| Scott Rigby     | [@scottrigby](https://github.com/scottrigby)     | <https://keybase.io/r6by/pgp_keys.asc>         | 208D D36E D5BB 3745 A167 43A4 C7C6 FBB5 B91C 1155 |
 
 ### Handling
 
@@ -35,7 +35,7 @@ Current Security Team members:
 - As the security issue moves through the identification and resolution process, the reporter will be notified.
 - Additional questions about the vulnerability may also be asked of the reporter.
 - Note that while Flux is very active it is a vendor-neutral CNCF project maintained by volunteers, not by a single company. As such, security issue handling is done on a best-effort basis.
-  Talk to us if you are interested in getting involved with this work! :-)
+  Talk to us if you are interested in getting involved with this work!
 
 ### Disclosures
 
@@ -55,9 +55,10 @@ The existing advisories can be found below:
 - https://github.com/fluxcd/flux2/security/advisories
 - https://github.com/fluxcd/kustomize-controller/security/advisories
 - https://github.com/fluxcd/source-controller/security/advisories
+- https://github.com/fluxcd/notification-controller/security/advisories
 
 ## Audits
 
-- In 2021 there was a security assessment and fuzzer development of the `fluxcd` repositories made by Ada Logics and funded by the CNCF.
-- For a summary, please see [this blog post](https://fluxcd.io/blog/2021-11-10-flux-security-audit/)
-- For all details, please read the [audit full technical report](https://fluxcd.io/FluxFinalReport-v1.1.pdf)
+- **2021** [Ada Logics (funded by the CNCF)](https://fluxcd.io/blog/2021/11/flux-security-audit/)
+- **2023** [Trail of Bits (funded by the CNCF)](https://fluxcd.io/blog/2023/11/flux-security-audit/)
+- **2025** [Self-assessment (TAG Security)](https://tag-security.cncf.io/community/assessments/projects/flux/self-assessment/)

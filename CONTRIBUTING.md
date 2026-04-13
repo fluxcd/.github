@@ -1,112 +1,116 @@
 # Contributing
 
-> **Note:** In this document we define the contribution process for the Flux project and community. These guidelines apply to all git repositories in the `fluxcd` GitHub org.
->
-> For more detailed docs, please refer to the following docs for
->
-> - [helm-controller](https://github.com/fluxcd/kustomize-controller/blob/main/DEVELOPMENT.md)
-> - [kustomize-controller](https://github.com/fluxcd/kustomize-controller/blob/main/DEVELOPMENT.md)
-> - [image-automation-controller](https://github.com/fluxcd/image-automation-controller/blob/main/DEVELOPMENT.md)
-> - [image-reflector-controller](https://github.com/fluxcd/image-reflector-controller/blob/main/DEVELOPMENT.md)
-> - [notification-controller](https://github.com/fluxcd/notification-controller/blob/main/DEVELOPMENT.md)
-> - [source-controller](https://github.com/fluxcd/source-controller/blob/main/DEVELOPMENT.md)
+Flux is [Apache 2.0 licensed](https://github.com/fluxcd/flux2/blob/main/LICENSE) and accepts contributions via GitHub pull requests.
+This document outlines the conventions to get your contribution accepted.
+We gratefully welcome improvements to documentation as well as code contributions.
 
-Flux is [Apache 2.0 licensed](https://github.com/fluxcd/flux2/blob/main/LICENSE) and
-accepts contributions via GitHub pull requests. This document outlines
-some of the conventions on to make it easier to get your contribution
-accepted.
+If you are new to the project, we recommend starting with documentation improvements or
+small bug fixes to get familiar with the codebase and the contribution process.
 
-We gratefully welcome improvements to issues and documentation as well as to
-code.
+## Project Structure
 
-## Welcome
+The Flux project consists of a set of Kubernetes controllers and tools that implement the GitOps pattern.
+The main repositories in the Flux project are:
 
-We gratefully welcome all kinds of contributions, including code, issues, documentation, external tools, advocacy and community work. All members of the Flux community, including contributors, are expected to uphold the Flux community [Values](https://github.com/fluxcd/community/blob/main/GOVERNANCE.md#values) and [Code of Conduct](https://github.com/fluxcd/community/blob/main/GOVERNANCE.md#code-of-conduct).
+- [fluxcd/flux2](https://github.com/fluxcd/flux2): The Flux distribution and command-line interface (CLI)
+- [fluxcd/pkg](https://github.com/fluxcd/pkg): The GitOps Toolkit Go SDK for building Flux controllers and CLI plugins
+- [fluxcd/source-controller](https://github.com/fluxcd/source-controller): Kubernetes operator for managing sources (Git, OCI and Helm repositories, S3-compatible Buckets)
+- [fluxcd/source-watcher](https://github.com/fluxcd/source-watcher): Kubernetes operator for advanced source composition and decomposition patterns
+- [fluxcd/kustomize-controller](https://github.com/fluxcd/kustomize-controller): Kubernetes operator for building GitOps pipelines with Kustomize
+- [fluxcd/helm-controller](https://github.com/fluxcd/helm-controller): Kubernetes operator for lifecycle management of Helm releases
+- [fluxcd/notification-controller](https://github.com/fluxcd/notification-controller): Kubernetes operator for handling inbound and outbound events (alerts and webhook receivers)
+- [fluxcd/image-reflector-controller](https://github.com/fluxcd/image-reflector-controller): Kubernetes operator for scanning container registries for new image tags and digests
+- [fluxcd/image-automation-controller](https://github.com/fluxcd/image-automation-controller): Kubernetes operator for patching container image tags and digests in Git repositories
+- [fluxcd/website](https://github.com/fluxcd/website): The Flux documentation website accessible at <https://fluxcd.io/>
 
-## Communications
+## AI Coding Assistants Guidance
 
-For realtime communications we use Slack: To join the conversation, simply
-join the [CNCF](https://slack.cncf.io/) Slack workspace and use the
-[#flux-contributors](https://cloud-native.slack.com/messages/flux-contributors/) channel.
+Using AI Agents to help write your PR is acceptable, but as the author, you are responsible
+for understanding the code and the documentation you submit. Please review all the AI-generated
+content and make sure it follows the guidelines in this document before submitting your PR.
 
-To discuss ideas and specifications we use [Github
-Discussions](https://github.com/fluxcd/flux2/discussions).
+All Flux repositories contain an `AGENTS.md` file. You must point your AI Agent to
+`AGENTS.md` and ask it to follow the guidelines and conventions described there.
 
-For announcements we use a mailing list as well. Simply subscribe to
-[flux-dev on cncf.io](https://lists.cncf.io/g/cncf-flux-dev)
-to join the conversation (there you can also add calendar invites
-to your Google calendar for our [Flux
-meeting](https://docs.google.com/document/d/1l_M0om0qUEN_NNiGgpqJ2tvsF2iioHkaARDeh6b70B0/view)).
+Trim down the verbiage in the PR description, commit messages and code comments.
+When engaging with Flux maintainers please refrain from using AI Agents to
+generate responses, we want to talk to you, not to your AI Agent.
 
-## Semantic Versioning
+AI Agents **must not** add `Signed-off-by` or `Co-authored-by` tags to the commit message.
+Only humans can legally certify the Developer Certificate of Origin ([DCO](https://developercertificate.org/)).
 
-The Flux project and community git repositories maintain a strong commitment to clear communication about backwards compatibility. For this reason, all code contributions must follow the Semantic Versioning 2.0.0 Specification (SemVer) per <https://semver.org/>, so that users can trust compatibility based on version scheme.
+You should disclose the use of AI Agents in the description of your PR and
+in the commit message using the `Assisted-by: AGENT_NAME/LLM_VERSION` tag.
+
+Adding the `Assisted-by` tag to the commit message can be done with:
+
+```sh
+git commit -s -m "Your commit message" --trailer "Assisted-by: <agent>/<model>"
+```
+
+**Note** that the `Signed-off-by` tag is set via the `-s` flag using your real name and email
+(`user.name` and `user.email` must be set in Git config).
+
+## Certificate of Origin
+
+By contributing to this project you agree to the Developer Certificate of Origin (DCO).
+This document was created by the Linux Kernel community and is a simple statement that you,
+as a contributor, have the legal right to make the contribution.
+
+We require all commits to be signed. By signing off with your signature, you certify that you wrote
+the patch or otherwise have the right to contribute the material by the rules of the [DCO](https://raw.githubusercontent.com/fluxcd/flux2/refs/heads/main/DCO):
+
+`Signed-off-by: Jane Doe <jane.doe@example.com>`
+
+The signature must contain your real name (sorry, no pseudonyms or anonymous contributions).
+If your `user.name` and `user.email` are set in your Git config,
+you can sign your commit automatically with `git commit -s`.
 
 ## Acceptance policy
 
 These things will make a PR more likely to be accepted:
 
-- a well-described requirement
-- new code follows the conventions in old code
-- a good commit message (see below)
-- all code must abide [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
-- names should abide [What's in a name](https://talks.golang.org/2014/names.slide#1)
-- code must build on both Linux and Darwin, via plain `go build`
+- Addressing an open issue, if one doesn't exist, please open an issue to discuss the problem and the proposed solution before submitting a PR.
+- Flux is GA software and we are committed to maintaining backward compatibility. If your contribution introduces a breaking change, expect for your PR to be rejected.
+- New code and tests must follow the conventions in the existing code and tests. All new code must have good test coverage and be well documented.
+- All top-level Go code and exported names should have doc comments, as should non-trivial unexported type or function declarations.
+- Before submitting a PR, make sure that your code is properly formatted by running `make tidy fmt vet` and that all tests are passing by running `make test`.
 
 In general, we will merge a PR once one maintainer has endorsed it.
 For substantial changes, more people may become involved, and you might
 get asked to resubmit the PR or divide the changes into more than one PR.
 
-### Testing Requirements
+## Format of the Commit Message
 
-We require the following:
+For the Flux project we prefer the following rules:
 
-- code should have appropriate test coverage and tests should be written to work with `go test`
-- new tests follow the conventions of existing tests
-- regression tests
+- Limit the subject to 50 characters, start with a capital letter and do not end with a period.
+- Explain what and why in the body, if more than a trivial change; wrap it at 72 characters.
+- Use the imperative mood in the subject line (e.g., "Add support for X" instead of "Added support for X" or "Adds support for X").
+- Do not include GitHub mentions to issues in the commit message, use the PR description instead (e.g., "Fixes #123" or "Closes #123").
+- Do not include GitHub mentions to accounts (e.g., `@username` or `@team`) within the commit message.
 
-Regression tests are important because they ensure that the code change did not break any existing features. Here is [a commit with regression tests](https://github.com/fluxcd/source-controller/commit/e736493730318764a0568c8ae3c0e8549924bb44) for you to refer.
+## Pull Request Process
 
-### Certificate of Origin
+Fork the repository and create a new branch for your changes, do not commit directly to the `main` branch.
+Once you have made your changes and committed them, push your branch to your fork and open a pull request
+against the `main` branch of the Flux repository.
 
-By contributing to this project you agree to the Developer Certificate of
-Origin (DCO). This document was created by the Linux Kernel community and is a
-simple statement that you, as a contributor, have the legal right to make the
-contribution.
+During the review process, you may be asked to make changes to your PR. Add commits to address the feedback
+without force pushing, as this will make it easier for reviewers to see the changes.
+Before committing, make sure to run `make test` to ensure that your code will pass the CI checks.
 
-We require all commits to be signed. By signing off with your signature, you
-certify that you wrote the patch or otherwise have the right to contribute the
-material by the rules of the [DCO](https://github.com/fluxcd/community/blob/main/DCO):
+When the review process is complete, you will be asked to **squash** the commits and **rebase** your branch.
+**Do not merge** the `main` branch into your branch, instead, rebase your branch on top of the latest `main`
+branch after **syncing your fork** with the latest changes from the Flux repository. After rebasing,
+you can push your branch with the `--force-with-lease` option to update the PR.
 
-`Signed-off-by: Jane Doe <jane.doe@example.com>`
+## Communications
 
-The signature must contain your real name
-(sorry, no pseudonyms or anonymous contributions)
-If your `user.name` and `user.email` are configured in your Git config,
-you can sign your commit automatically with `git commit -s`.
+For realtime communications we use Slack. To reach out to the Flux maintainers and contributors,
+join the [CNCF](https://slack.cncf.io/) Slack workspace and use the [#flux-contributors](https://cloud-native.slack.com/messages/flux-contributors/) channel.
+To discuss ideas and specifications we use [GitHub Discussions](https://github.com/fluxcd/flux2/discussions).
 
-This is automatically checked by the [Probot](https://github.com/probot/dco/): DCO integration across all `fluxcd` GitHub org repositories.
-
-Commit signoff is a simple statement that you, as a contributor, have the legal right to make the contribution. See `git help commit`:
-
-> The meaning of a signoff depends on the project, but it typically certifies that committer has the rights to submit this work under the same license and agrees to a Developer Certificate of Origin (see <http://developercertificate.org/> for more information).
-
-#### CLI
-
-When signing commits with git commit -s, signoff is drawn automatically from your `user.name` and `user.email` git configs. If you choose to manually add a signoff line to your commit message, it must be properly formatted and match your commit information. For example, when using the GitHub [private email option](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address) you must set your git config email accordingly. For those who wish to ensure this is always done in your CLI, consider implementing something like [this gist](https://gist.github.com/scottrigby/0c043c0bfbbdb5949e2d824fc3adeaa4).
-
-### Format of the Commit Message
-
-For the GitOps Toolkit controllers we prefer the following rules for good commit messages:
-
-- Limit the subject to 50 characters and write as the continuation
-  of the sentence "If applied, this commit will ..."
-- Explain what and why in the body, if more than a trivial change;
-  wrap it at 72 characters.
-
-The [following article](https://chris.beams.io/posts/git-commit/#seven-rules)
-has some more helpful advice on documenting your work.
-
-## Thank You
-
-[Contributors](https://github.com/fluxcd/community/blob/main/GOVERNANCE.md#contributors) are crucial to ensuring the Flux project continues to fairly represent community interests. Thank you for all that you do.
+For announcements, we use a mailing list as well. Subscribe to
+[flux-dev on cncf.io](https://lists.cncf.io/g/cncf-flux-dev), there you can also add calendar invites
+to your Google calendar for our [Flux dev meeting](https://docs.google.com/document/d/1l_M0om0qUEN_NNiGgpqJ2tvsF2iioHkaARDeh6b70B0/view).
